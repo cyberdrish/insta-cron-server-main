@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-
-const MONGODB_URI = "mongodb://localhost:27017/Testapp";
+require("dotenv").config();
+const MONGODB_URI = process.env.MONGODB_URI;
 
 console.log("URI", MONGODB_URI);
 async function connectToDatabase() {
